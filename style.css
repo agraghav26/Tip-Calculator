@@ -48,7 +48,14 @@ body {
 }
 p {
   color: hsl(184, 14%, 43%);
+  display: inline-block;
   font-weight: 700;
+  text-align: left;
+}
+span{
+  float: right;
+ margin-top: 16px;
+ color: red;
 }
 /* Clear floats after the columns */
 /* .row:after {
@@ -103,6 +110,9 @@ input:focus{
   /* border: 3px solid hsl(262, 75%, 48%); */
   outline-color:   hsl(172, 67%, 45%);
 }
+.red:focus{
+  outline-color: red;
+}
 .selecttip{
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -115,7 +125,17 @@ input:focus{
   background-color: hsl(183, 100%, 15%);
   border-radius: 5px;
   padding:5px;
+  font-weight: 700;
   /* text-align : center; */
+}
+.TipC{
+  background-color: hsl(185, 41%, 84%);
+  color: hsl(183, 100%, 15%);
+
+}
+.Selected{
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
 }
 .Custom{
   border-radius: 5px;
@@ -123,7 +143,23 @@ input:focus{
   color: hsl(184, 14%, 43%);
   font-weight: 700;
   text-align: center;
+  display: inline-block;
+  width: 110px;
+  font-size: 15px;
   background-color: hsl(189, 41%, 97%);
+}
+.Custom::placeholder{
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.edit{
+   text-align: right;
+   color: hsl(183, 100%, 15%);
+   font-size: 15px;;
+}
+.edit:focus{
+  outline-color:   hsl(172, 67%, 45%);
 }
 .right{
  background-color: hsl(183, 100%, 15%);
