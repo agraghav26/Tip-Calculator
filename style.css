@@ -110,6 +110,13 @@ input:focus{
   /* border: 3px solid hsl(262, 75%, 48%); */
   outline-color:   hsl(172, 67%, 45%);
 }
+input:hover{
+  cursor: pointer;
+  outline-color:   hsl(172, 67%, 45%);
+}
+.Tip:hover{
+  cursor: pointer;
+}
 .red:focus{
   outline-color: red;
 }
@@ -203,6 +210,11 @@ input:focus{
   padding: 10px;
   border-radius: 5px;
   background-color: hsl(172, 67%, 45%);
+}
+.reset:hover{
+  cursor: pointer;
+  background-color: hsl(185, 41%, 84%);
+
 }
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */

@@ -1,7 +1,7 @@
-const input = document.querySelectorAll("input")[0];
+const input1 = document.querySelectorAll("input")[0];
 const bill = document.getElementById("bill");
 let Bill = 0;
-input.addEventListener("change", updateValue);
+input1.addEventListener("change", updateValue);
 
 function updateValue(e) {
   bill.textContent = e.target.value;
@@ -58,7 +58,7 @@ for (let i = 0; i < tip.length; i++) {
         while(click.length > 0)
         click.pop();
         document.getElementsByClassName("Custom")[0].classList.remove("edit");
-        document.getElementsByClassName("Custom")[0].value = "Custom";
+        document.getElementsByClassName("Custom")[0].placeholder = "Custom";
 
         
       }
@@ -85,7 +85,8 @@ document
         click.pop();
     }
     document.getElementsByClassName("Custom")[0].classList.add("edit");
-    document.getElementsByClassName("Custom")[0].value = "0";
+    document.getElementsByClassName("Custom")[0].placeholder = "0";
+    tipam = 0 ;
 
     // const bill = document.getElementById("bill");
     // let Bill = 0;
@@ -100,8 +101,38 @@ document
   
     click.push(6);
   });
-
+let biprson = 0 ,tipper  = 0 ,totper = 0 ;
 function tipamount(){
-
-  
+  if(NOP !=0){
+ biprson  =  Bill/NOP;
+  tipper = (biprson*tipam)/100;
+  totper = biprson+tipper;
+  tipper = parseFloat(tipper).toFixed(2);
+  totper = parseFloat(totper).toFixed(2);
+  document.getElementById("tipper").textContent = "$" + tipper.toString();
+  document.getElementById("totalper").textContent = "$" + totper.toString();
 }
+
+
+}
+
+input1.oninput = tipamount;
+input1.onchange = tipamount;
+input2.oninput = tipamount;
+input2.onchange = tipamount;
+input3.oninput = tipamount;
+input3.onchange = tipamount;
+document.getElementsByClassName("Custom")[0].onclick = tipamount;
+for (let i = 0; i < tip.length; i++) {
+  document
+    .getElementsByClassName("Tip")
+    [i].onclick = tipamount;
+}
+
+//  var intervalId = window.setInterval(tipamount(), 1);
+function reload() {
+  reload = location.reload();
+}
+// Event listeners for reload
+
+document.getElementsByClassName("reset")[0].addEventListener("click", reload, false);
